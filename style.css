@@ -17,3 +17,8 @@ body{
     font-family: xx-large;
     
 }
+#start{
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}

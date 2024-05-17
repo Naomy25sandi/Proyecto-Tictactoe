@@ -18,14 +18,16 @@ function userMove(e) {
     checkLine(0, 3, 6);
     checkLine(1, 4, 7);
     checkLine(2, 5, 8);
-    checkLine(0, 48, 2);
+    checkLine(0, 4, 2);
     checkLine(6, 4, 2);
   } 
 
 }
-function checkLine(c1,c2, c3) {
-    if (box[c1].innerHTML.length && 
-        box[c1].innerHTML == box[c2].innerHTML && box[c2].innerHTML == box[c3].innerHTML
+function checkLine(c1, c2, c3) {
+    if (
+        box[c1].innerHTML.length && 
+        box[c1].innerHTML == box[c2].innerHTML && 
+        box[c2].innerHTML == box[c3].innerHTML
     ) {
        showWinner(box[c1].innerHTML);
     }
