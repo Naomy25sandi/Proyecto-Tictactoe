@@ -1,0 +1,14 @@
+.contenedor{
+    display: flex;
+    grid-template-columns: repeat(3,60px);
+    margin: 100px;
+}
+
+
+.contenedor .box{
+    border: 3px solid blue;
+    width: 80px;
+    height: 80px;
+    font-family: xx-large;
+    justify-content: center;
+}
