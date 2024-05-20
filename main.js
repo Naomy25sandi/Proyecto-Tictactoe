@@ -1,39 +1,23 @@
-//llamo al primer jugador
-let isPlayerOne = true;
-let box= document.getElementsByClassName("box");
-console.log(box)
+let casilla0 = document.getElementById('b0');
+let casilla1 = document.getElementById('b1');
+let casilla2 = document.getElementById('b2');
+let casilla3 = document.getElementById('b3');
+let casilla4 = document.getElementById('b4');
+let casilla5 = document.getElementById('b5');
+let casilla6 = document.getElementById('b6');
+let casilla7 = document.getElementById('b7');
+let casilla8 = document.getElementById('b8');
 
-for (let i = 0; i < box.length; i++) {
-   box[1].addEventListener('click', userMove);
-    
-}
-function userMove(e) {
-  let boxValue = e.target.innerHTML;
-  if (boxValue.length) {
-    e.target.innerHTML = isPlayerOne? 'X' : 'O';
+let tablero = [casilla0,casilla1,casilla2,casilla3,casilla4,casilla5,casilla6,casilla7,casilla8]
 
-    checkLine(0, 1, 2);
-    checkLine(3, 4, 5);
-    checkLine(6, 7, 8);
-    checkLine(0, 3, 6);
-    checkLine(1, 4, 7);
-    checkLine(2, 5, 8);
-    checkLine(0, 4, 2);
-    checkLine(6, 4, 2);
-  } 
 
+function juego() {
+  tablero.forEach(celda=>celda.addEventListener("click",function(){
+    celda.innerHTML = "x"
+  }))
 }
-function checkLine(c1, c2, c3) {
-    if (
-        box[c1].innerHTML.length && 
-        box[c1].innerHTML == box[c2].innerHTML && 
-        box[c2].innerHTML == box[c3].innerHTML
-    ) {
-       showWinner(box[c1].innerHTML);
-    }
-    
+
+function juegoPc() {
+  
 }
-function showWinner(player) {
-    document.querySelector('#results').innerHTML = player + "win";
-    
-}
+juego()
