@@ -18,9 +18,12 @@ body{
     width: 100px;
     height: 100px;
     font-family: xx-large;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
 }
 #start{
-    border-radius: 20px;
-    padding: 15px 15px;
+    border-radius: 10px;
+    padding: 10px 15px;
 }
