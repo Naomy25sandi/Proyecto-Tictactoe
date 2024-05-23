@@ -72,7 +72,7 @@ function juego() {
   tablero.forEach(celda => celda.addEventListener("click", function () {
     celda.innerHTML = "❌";
     if (checkEmpate()) {
-      alert("¡Empate!");
+      alert("Empate!");
       return;
     }
     maquina();
