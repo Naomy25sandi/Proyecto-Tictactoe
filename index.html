@@ -8,12 +8,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body sr>
-    <header>
-        <h1>Que gane el mejor!</h1>
+<body background="img/space-1164579_1280.png">
+  
+        <h1>Qué gane el mejor!</h1>
         <br><br>
         <button id="start">Iniciar</button>
-    </header>
+
+        <button class="instrucciones" data-id="abrir-modal">Instrucciones</button>
+        
+        <dialog class="modal">
+            <h3>Instrucciones</h3>
+            <p>Cada jugador solo debe colocar su símbolo una vez por turno y no debe ser sobre una casilla ya jugada. En caso de que el jugador haga trampa el ganador será el otro. Se debe conseguir realizar una línea recta o diagonal por símbolo.</p>
+            <img class="gatito"  src="img/gato-negro.png" alt="">
+            <button class="cerrar" data-id="cerrar-modal">Cerrar</button>
+        </dialog>
+
+   
 
     <div class="contenedor">
         <div id="casilla0" class="box"> </div>
