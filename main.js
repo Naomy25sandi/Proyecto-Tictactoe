@@ -37,11 +37,6 @@ function maquina() {
     }
   }, 1000);
 }
-
-
-let contenidoGnador;
-
-
  //funcion para ganador
 function checkLine() {
   const posGanadoras = [
@@ -61,7 +56,7 @@ function checkLine() {
         if (tablero[a].innerHTML == '❌') {
           alert("VICTORIA "+'❌')  
         }else{
-          alert("VICTORIA "+'')  
+          alert("VICTORIA "+'⭕')  
         }
         return true
         
@@ -69,3 +64,22 @@ function checkLine() {
       }   
 }
 }
+function checkEmpate() {
+  // Verifica si todas las casillas están llenas
+  return tablero.every(celda => celda.innerHTML !== "");
+}
+function juego() {
+  tablero.forEach(celda => celda.addEventListener("click", function () {
+    celda.innerHTML = "❌";
+    if (checkEmpate()) {
+      alert("¡Empate!");
+      return;
+    }
+    maquina();
+
+    // si hay ganador
+    if (checkLine()){}
+  }));
+}
+
+
