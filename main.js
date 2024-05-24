@@ -29,21 +29,21 @@ let tablero = [casilla0, casilla1, casilla2, casilla3, casilla4, casilla5, casil
 //  llamo la funcion y la recorro con el forEach y agrego el evento con el click//
 function juego() {
    tablero.forEach(celda => celda.addEventListener("click", function () {//para iterar sobre los elementos de un array //
-    celda.innerHTML = "❌"
+    celda.innerHTML = "❌" // jugador x //
     maquina()
 
     // si hay ganador
     if (checkLine()){}
   }))
 }
-juego()
+juego()// jugador x //
 
-function maquina() {// funcion para que juegue la maquina//
+function maquina() {// funcion para que juegue la maquina usando espacios en blanco//
   setTimeout(() => {
     let vacio= tablero.filter(cel=>cel.innerHTML == "");
     let numAleatorio = Math.floor(Math.random()*vacio.length)
     if (vacio.length > 0) {
-      vacio[numAleatorio].innerHTML = "⭕"
+      vacio[numAleatorio].innerHTML = "⭕" // turno de la maquina //
     }
   }, 1000);
 }
@@ -64,7 +64,7 @@ function checkLine() {
       [a,b,c] = pos
       if(tablero[a].innerHTML && tablero[a].innerHTML === tablero[b].innerHTML && tablero[a].innerHTML==tablero[c].innerHTML){
           
-        if (tablero[a].innerHTML == '❌') {
+        if (tablero[a].innerHTML == '❌') {// alerta para saber quien hace la jugada que da gane//
           alert("VICTORIA "+'❌')  
         }else{
           alert("VICTORIA "+'⭕')  
@@ -84,7 +84,7 @@ return tablero.every(celda=> celda.innerHTML !== "");
 function juego() {
   tablero.forEach(celda => celda.addEventListener("click", function () {
    celda.innerHTML = "❌";
-   if (checkEmpate()) {
+   if (checkEmpate()) {// empate //
     alert("Empate!");
     return;
    }
