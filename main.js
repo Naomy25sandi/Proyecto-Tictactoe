@@ -8,16 +8,16 @@ let casilla6 = document.getElementById('casilla6');
 let casilla7 = document.getElementById('casilla7');
 let casilla8 = document.getElementById('casilla8');
 let iniciar = document.getElementById('start');
-let abrir = document.querySelector("[data-id='abrir-modal']");
-let cerrar = document.querySelector("[data-id='cerrar-modal']");
-let dialog = document.querySelector('.modal');
+let abrir = document.querySelector("[data-id='abrir-modal']");//abrir modal
+let cerrar = document.querySelector("[data-id='cerrar-modal']");//cerrar modal
+let dialog = document.querySelector('.modal');//modal
 
 abrir.addEventListener('click', ()=>{
-  dialog.showModal();
+  dialog.showModal();//funcion para abrir//
 });
 
 cerrar.addEventListener('click', ()=>{
-  dialog.close();
+  dialog.close();// funcion para cerrar//
 });
 
 iniciar.addEventListener('click', _=>{
