@@ -49,7 +49,7 @@ function maquina() {// funcion para que juegue la maquina usando espacios en bla
 }
 
  //funcion para ganador
-function checkLine() {
+function checkLine() { // comparar posiciones //
   const posGanadoras = [
     [0,1,2],    //FILAS
     [3,4,5],
@@ -93,5 +93,7 @@ function juego() {
    if (checkLine()) {}
 }));
 }
+
+
    
   
