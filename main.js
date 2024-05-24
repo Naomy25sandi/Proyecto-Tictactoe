@@ -79,14 +79,14 @@ function checkLine() {
 function checkEmpate(){
   //verifica si todas las casilla estan llenas
 return tablero.every(celda=> celda.innerHTML !== "");
-
+// .every verifica si todas las casillas cumplen una condicion//
 }
 function juego() {
   tablero.forEach(celda => celda.addEventListener("click", function () {
    celda.innerHTML = "❌";
    if (checkEmpate()) {// empate //
     alert("Empate!");
-    return;
+    return true;
    }
    maquina();
    //si hay ganador
